@@ -227,8 +227,11 @@ function cleancss(cb) {
 function jsPlugins(cb) {
 	return gulp.src([
         pathTo.resolve('node_modules', 'jquery/*/jquery.min.js'),
-        pathTo.resolve('node_modules', 'swiper/swiper-bundle.min.js'),
-        pathTo.resolve('node_modules', 'inputmask/*/inputmask.min.js')
+        pathTo.resolve('src', 'assets/js/plugins/jquery.fancybox.min.js'),
+        pathTo.resolve('src', 'assets/js/plugins/jquery-ui-core.min.js'),
+        pathTo.resolve('src', 'assets/js/plugins/jquery-ui-mouse.min.js'),
+        pathTo.resolve('src', 'assets/js/plugins/jquery-ui-slider.min.js'),
+        pathTo.resolve('src', 'assets/js/plugins/slick.min.js')
 	])
     .pipe(plumber({
 		errorHandler: notify.onError("Error: <%= error.message %>")

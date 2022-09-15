@@ -3,120 +3,68 @@ block header
 
     header#header.header
 
-        .header__top
+        .navbar.w-nav.visible(data-collapse='medium' data-animation='default' data-duration='400' style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;")
 
-            .container
+            div
 
-                .header__top-inner
+                .menu-container.w-container
 
-                    .header__logo
-                        img(src="assets/images/logo.png", alt="logo")
+                    a.brand.w-nav-brand(href='/')
+                        img.image(src='assets/images/60315492650d6785b5c81b96_logo_red.svg' loading='lazy' alt='' title='')
 
-                    .header__cities Москва
+                    nav.nav-menu.w-nav-menu
 
-                    .header__phone
-                        a(href="tel:+7 495 777 0000") +7 495 777 0000
+                        .div-block-39
 
-                    .header__search
-                        form
-                            input(type="text" placeholder="Поиск")
-                            button(type="submit")
-                                i.far.fa-magnifying-glass
+                            .div-block-9
+                                a.nav-link.w-nav-link(title='' target='_self' href='https://school.russianseasons.org/#about') About
 
-                    .header__action
-                        a.header-button.header-button-profile(href="javascript:void(0);")
-                            i.fal.fa-user
-                        a.header-button.header-button-cart(href="#" data-stock="1")
-                            i.fal.fa-cart-shopping
-                        a.header-button.header-button-favorite(href="#" data-stock="1")
-                            +sprite('heart')
+                                .nav-link.w-dropdown(data-ix='new-interaction' data-hover='1')
+                                    .dropdown-toggle.w-dropdown-toggle
+                                        div Sessions
+                                        .icon.w-icon-dropdown-toggle
+                                    nav.dropdown-list.w-dropdown-list
+                                        a.dropdown-link.w-dropdown-link(title='' target='_self' href='#') Art Session in the Republic of Senegal 2022
+                                        a.dropdown-link.w-dropdown-link(title='' target='_self' href='#') Art session 2022
+                                        a.dropdown-link.w-dropdown-link(title='' target='_self' href='#') Choreography Session 2022
+                                        a.dropdown-link.w-dropdown-link(title='' target='_self' href='#') Art Session 2021
+                                        a.dropdown-link.w-dropdown-link(title='' target='_self' href='#') Music Session 2021
+                                        a.dropdown-link.w-dropdown-link(title='' target='_self' href='#') Choreography Session 2021
+                                        a.dropdown-link.w-dropdown-link(title='' target='_self' href='#') Art Session 2020
+                                        a.dropdown-link.w-dropdown-link(title='' target='_self' href='#') Theatre Session 2020
+                                        a.dropdown-link.w-dropdown-link(title='' target='_self' href='#') Special course
 
-                    .header__burger
-                        i.fal.fa-bars
+                                .nav-link.w-dropdown(data-ix='new-interaction' data-hover='1')
+                                    .dropdown-toggle.w-dropdown-toggle
+                                        div Festival
+                                        .icon.w-icon-dropdown-toggle
+                                    nav.dropdown-list.w-dropdown-list
+                                        a.dropdown-link.w-dropdown-link(title='' target='_self' href='#') FESTIVAL 2022
+                                        a.dropdown-link.w-dropdown-link(title='' target='_self' href='#') Festival 2021
 
-                    // Попап "Добавлено в корзину"
-                    .header-popup.animate__animated.animate__fadeIn.hide
-                        .header-popup-close
-                        .cart-popup-added
-                            .cart-popup__img
-                                img(src="assets/images/popup-cart.png", alt="img")
-                            .cart-popup__block
-                                .cart-popup__label Добавлено в корзину
-                                .cart-popup__info Диван современный красного цвета
+                                .nav-link.w-dropdown(data-ix='new-interaction' data-hover='1')
+                                    .dropdown-toggle.w-dropdown-toggle
+                                        div Gallery
+                                        .icon.w-icon-dropdown-toggle
+                                    nav.dropdown-list.w-dropdown-list
+                                        a.dropdown-link.w-dropdown-link(title='' target='_self' href='#') Video
+                                        a.dropdown-link.w-dropdown-link(title='' target='_self' href='#') Photos
 
-        .header__nav
+                                a.nav-link.w-nav-link(title='' target='_self' href='#') Partners
 
-            .container
+                                a.nav-link.w-nav-link(title='' target='_self' href='#contacts') Contacts
 
-                .header__menu
+                            .div-block-3
+                                .div-block-11
+                                    a.fb.w-inline-block(href='#' target='_blank')
+                                    a.insta.w-inline-block(href='#' target='_blank')
 
-                    .header__menu-mobile
-                        .close-menu
-                            i.fal.fa-xmark
+                                .div-block-73
+                                    a.link(href='/ru/') Ru
+                                    a.link.w--current(href='/' aria-current='page') en
 
-                        .mobile-header__cities Москва
-
-                        a.mobile-menu__link(href="tel:+7 495 777 0000")
-                            i.fal.fa-phone
-                            span +7 495 777 0000
-                        a.mobile-menu__link(href="#")
-                            i.fal.fa-user
-                            span Войти в личный кабинет
-                        a.mobile-menu__link.mobile-menu-favorite(href="#")
-                            +sprite('heart')
-                            span Избранное
-
-                    nav.navbar
-                        .navbar__link
-                            .navbar__link-submenu
-                                a(href="#") Каталог мебели
-                                .nav-toggle
-                            .nav__submenu.animate__animated.animate__fadeIn.animate__faster
-                                a.nav__submenu-link(href="#")
-                                    +sprite('divany')
-                                    span Диваны
-                                a.nav__submenu-link(href="#")
-                                    +sprite('komody')
-                                    span Комоды
-                                a.nav__submenu-link(href="#")
-                                    +sprite('stellazhi')
-                                    span Стеллажи
-                                a.nav__submenu-link(href="#")
-                                    +sprite('stoly')
-                                    span Столы
-                                a.nav__submenu-link(href="#")
-                                    +sprite('krovaty')
-                                    span Кровати
-
-                        .navbar__link
-                            .navbar__link-submenu.animate__animated.animate__fadeIn.animate__faster
-                                a(href="#") Готовые решения
-                                .nav-toggle
-                            .nav__submenu
-                                a.nav__submenu-link(href="#") Комоды
-                                a.nav__submenu-link(href="#") Столы
-                                a.nav__submenu-link(href="#") Кровати
-
-                        .navbar__link
-                            a(href="#") О нас
-
-                        .navbar__link
-                            a(href="#") Новости
-
-                        .navbar__link
-                            a(href="#") Доставка
-
-                        .navbar__link
-                            a(href="#") Оплата
-
-                        .navbar__link
-                            a(href="#") Контакты
-
-                        .navbar__link
-                            a(href="#") Сам себе дизайнер
-
-
-                    .header-search__mobile
-                        form
-                            input(type="text" placeholder="Поиск")
-                            button.button-style.button-style--orange(type="submit") Поиск
+                    .menu-button.w-nav-button
+                        a.menu-icon.w-inline-block.w-clearfix(href='#')
+                            .menu-icon__line.left
+                            .menu-icon__line
+                            .menu-icon__line.right

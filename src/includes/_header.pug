@@ -7,7 +7,7 @@ block header
 
             div
 
-                .menu-container.w-container
+                .menu-container.w-container(class= page == 'gallery-video' ? 'black' : '')
 
                     a.brand.w-nav-brand(href='/')
                         img.image(src='assets/images/60315492650d6785b5c81b96_logo_red.svg' loading='lazy' alt='' title='')
@@ -60,8 +60,8 @@ block header
                                     a.insta.w-inline-block(href='#' target='_blank')
 
                                 .div-block-73
-                                    a.link(href='/ru/') Ru
-                                    a.link.w--current(href='/' aria-current='page') en
+                                    a.link.link--border(href='/ru/') Ru
+                                    a.link.link--border.w--current(href='/' aria-current='page') en
 
                     .menu-button.w-nav-button
                         a.menu-icon.w-inline-block.w-clearfix(href='#')

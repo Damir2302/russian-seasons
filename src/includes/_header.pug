@@ -7,17 +7,21 @@ block header
 
             div
 
-                .menu-container.w-container(class= page == 'gallery-video' ? 'black' : '')
+                .menu-container.w-container(class= page == 'gallery' ? 'black' : '')
 
                     a.brand.w-nav-brand(href='/')
-                        img.image(src='assets/images/60315492650d6785b5c81b96_logo_red.svg' loading='lazy' alt='' title='')
+                        if page == 'gallery'
+                            img.image(src='assets/images/logo_black.svg' loading='lazy' alt='' title='')
+
+                        else
+                            img.image(src='assets/images/logo_red.svg' loading='lazy' alt='' title='')
 
                     nav.nav-menu.w-nav-menu
 
                         .div-block-39
 
                             .div-block-9
-                                a.nav-link.w-nav-link(title='' target='_self' href='https://school.russianseasons.org/#about') About
+                                a.nav-link.w-nav-link(title='' target='_self' href='#about') About
 
                                 .nav-link.w-dropdown(data-ix='new-interaction' data-hover='1')
                                     .dropdown-toggle.w-dropdown-toggle
